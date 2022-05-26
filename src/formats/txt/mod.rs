@@ -1,6 +1,8 @@
-/// Plain text file
+/// Plain text file.
 pub struct VoidTXT {
+    /// Each byte will be filled to this.
     pub content: u8,
+    /// Unit: bytes.
     pub size: usize,
 }
 

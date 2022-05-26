@@ -41,3 +41,5 @@ examples:
     fvoid pdf:width=200,height=300 test.pdf
     fvoid mp3 test.mp3
 ";
+
+// .vscode/run.sh -- mp3:length=30 target/test.mp3
