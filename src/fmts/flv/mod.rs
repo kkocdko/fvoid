@@ -1,9 +1,10 @@
-/// Blank FLV video file with 4x4 resolution.
+/// Blank FLV video file.
 pub struct VoidFLV {
     /// Unit: seconds.
     pub duration: f64,
     /// Frames per second, affects jump accuracy. Suggested values: 1, 10, 30.
     pub fps: f64,
+    // Other info: resolution = 4x4, color = black
 }
 
 impl Default for VoidFLV {

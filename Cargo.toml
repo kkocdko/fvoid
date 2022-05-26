@@ -7,5 +7,7 @@ edition = "2021"
 strip = true
 lto = "fat"
 panic = "abort"
+# codegen-units = 1
+# opt-level = "z"
 
 [dependencies]
