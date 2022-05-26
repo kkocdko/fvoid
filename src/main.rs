@@ -25,7 +25,8 @@ fn main() {
     let opts: Vec<(&str, &str)> = opts.split(',').filter_map(|i| i.split_once('=')).collect();
     let path = args[2].as_str();
     let data = match kind {
-        "mp3" => accept_kind!(VoidMP3, [length], opts),
+        "flv" => accept_kind!(VoidFLV, [duration, fps], opts),
+        "mp3" => accept_kind!(VoidMP3, [duration], opts),
         "pdf" => accept_kind!(VoidPDF, [width, height, page_count], opts),
         "txt" => accept_kind!(VoidTXT, [content, size], opts),
         k => panic!("unknown format {k}"),
@@ -42,4 +43,4 @@ examples:
     fvoid mp3 test.mp3
 ";
 
-// .vscode/run.sh -- mp3:length=30 target/test.mp3
+// .vscode/run.sh -- flv:duration=20 target/test.flv

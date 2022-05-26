@@ -6,6 +6,7 @@ pub struct VoidTXT {
     pub size: usize,
 }
 
+#[allow(clippy::derivable_impls)]
 impl Default for VoidTXT {
     fn default() -> Self {
         Self {
