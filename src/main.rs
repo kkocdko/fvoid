@@ -28,6 +28,7 @@ fn main() {
         "flv" => accept_kind!(VoidFLV, [duration, fps], opts),
         "mp3" => accept_kind!(VoidMP3, [duration], opts),
         "pdf" => accept_kind!(VoidPDF, [width, height, page_count], opts),
+        "svg" => accept_kind!(VoidSVG, [width, height, color], opts),
         "txt" => accept_kind!(VoidTXT, [content, size], opts),
         k => panic!("unknown format {k}"),
     };
@@ -36,11 +37,11 @@ fn main() {
 
 const USAGE: &str = "\
 usage:
-    fvoid <format>[:key=value,] <output>
+    fvoid <format>[:options] <output>
 
 examples:
-    fvoid pdf:width=200,height=300 test.pdf
-    fvoid mp3 test.mp3
+    fvoid pdf:width=200,height=300 void.pdf
+    fvoid mp3 void.mp3
 ";
 
-// .vscode/run.sh -- flv:duration=20 target/test.flv
+// .vscode/run.sh -- flv:duration=20 target/void.flv

@@ -8,8 +8,6 @@ Void file generator, supports many formats.
 
 - `VoidPNG`: To be implemented.
 
-- `VoidSVG`: To be implemented.
-
 - `VoidM3U8`: To be implemented.
 
 - `VoidJPEG`: To be implemented.
