@@ -1,12 +1,12 @@
 /// Slient MP3 audio file.
 pub struct VoidMP3 {
     /// Unit: seconds.
-    pub length: f64,
+    pub duration: f64,
 }
 
 impl Default for VoidMP3 {
     fn default() -> Self {
-        Self { length: 5.0 }
+        Self { duration: 5.0 }
     }
 }
 
@@ -15,18 +15,14 @@ impl VoidMP3 {
         let mut ret = Vec::new();
 
         ret.extend(T_0);
-        for _ in 0..23 {
-            ret.push(0);
-        }
+        ret.resize(ret.len() + 23, 0);
 
         // 72 seconds => 1000 blocks
-        let block_count = (self.length * 1000.0 / 72.0).round() as usize;
+        let block_count = (self.duration * 1000.0 / 72.0).round() as usize;
 
         for _ in 0..block_count {
             ret.extend(T_1);
-            for _ in 0..59 {
-                ret.push(0x55);
-            }
+            ret.resize(ret.len() + 59, 0x55);
         }
 
         ret
@@ -34,12 +30,11 @@ impl VoidMP3 {
 }
 
 #[rustfmt::skip]
-const T_0:&[u8]=&[
+const T_0:&[u8] = &[
 0x49, 0x44, 0x33, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x23, 0x54, 0x53, 0x53, 0x45, 0x00, 0x00,
 0x00, 0x0F, 0x00, 0x00, 0x03, 0x4C,
 // then append `0x00` 23 times
 ];
-
 #[rustfmt::skip]
 const T_1: &[u8] = &[
 0xFF, 0xE3, 0x18, 0xC4, 0xC4, 0x00, 0x00, 0x03, 0x48, 0x00, 0x00, 0x00, 0x00,
@@ -47,7 +42,10 @@ const T_1: &[u8] = &[
 ];
 
 /*
+ffmpeg -f lavfi -i anullsrc=r=8000:cl=mono -t 10 -b:a 8k sample.mp3
+
 https://hexed.it
+
 let s='',d=`
 0xFF, 0xE3, 0x18, 0xC4, 0xC4, 0x00, 0x00, 0x03, 0x48, 0x00, 0x00, 0x00
 `.split(',').map(v=>v.trim());

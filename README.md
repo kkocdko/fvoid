@@ -8,10 +8,14 @@ Void file generator, supports many formats.
 
 - `VoidPNG`: To be implemented.
 
-- `VoidFLV`: To be implemented.
+- `VoidSVG`: To be implemented.
 
 - `VoidM3U8`: To be implemented.
+
+- `VoidJPEG`: To be implemented.
 
 - Publish to `crates.io`.
 
 - Enable `no_std`?
+
+- Error handling for illegal config.
