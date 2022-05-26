@@ -1,5 +1,6 @@
-/// FLV video file
+/// FLV video file.
 pub struct VoidFLV {
+    /// Unit: seconds.
     pub length: f64,
 }
 

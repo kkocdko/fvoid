@@ -1,6 +1,8 @@
-/// Blank PDF 1.3 file
+/// Blank PDF 1.3 file.
 pub struct VoidPDF {
+    /// Unit: px, on 72PPI.
     pub width: usize,
+    /// Unit: px, on 72PPI.
     pub height: usize,
     pub page_count: usize,
 }
