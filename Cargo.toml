@@ -2,12 +2,13 @@
 name = "fvoid"
 version = "0.1.0"
 edition = "2021"
+description = "Void file generator, supports many formats."
+license = "Unlicense"
 
 [profile.release]
 strip = true
 lto = "fat"
 panic = "abort"
-# codegen-units = 1
-# opt-level = "z"
+codegen-units = 1
 
 [dependencies]
