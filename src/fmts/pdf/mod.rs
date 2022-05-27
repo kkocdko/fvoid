@@ -1,4 +1,6 @@
-/// Blank PDF 1.3 file.
+/// Void PDF document file.
+///
+/// Other attributes: ver = 1.3
 pub struct VoidPDF {
     /// Unit: px, on 72PPI.
     pub width: usize,

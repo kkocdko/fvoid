@@ -1,8 +1,9 @@
-/// Slient MP3 audio file.
+/// Void MP3 audio file.
+///
+/// Other attributes: sampling = 8000Hz
 pub struct VoidMP3 {
     /// Unit: seconds.
     pub duration: f64,
-    // Other info: sampling = 8000Hz
 }
 
 impl Default for VoidMP3 {

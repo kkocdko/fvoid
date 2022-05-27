@@ -1,4 +1,4 @@
-/// Blank SVG file.
+/// Void SVG image file.
 pub struct VoidSVG {
     /// Unit: px.
     pub width: usize,

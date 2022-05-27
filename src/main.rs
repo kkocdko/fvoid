@@ -44,4 +44,4 @@ examples:
     fvoid mp3 void.mp3
 ";
 
-// .vscode/run.sh -- flv:duration=20 target/void.flv
+// .vscode/run.sh flv:duration=20 target/void.flv
