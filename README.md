@@ -8,12 +8,10 @@ Void file generator, supports many formats.
 
 - `VoidPNG`: To be implemented.
 
-- `VoidM3U8`: To be implemented.
+- `VoidMP2T`: To be implemented.
 
 - `VoidJPEG`: To be implemented.
 
-- Publish to `crates.io`.
-
-- Enable `no_std`?
-
 - Error handling for illegal config.
+
+- Example server using [tiny-http](https://github.com/tiny-http/tiny-http).

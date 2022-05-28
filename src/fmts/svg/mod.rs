@@ -1,9 +1,9 @@
 /// Void SVG image file.
 pub struct VoidSVG {
     /// Unit: px.
-    pub width: usize,
+    pub width: u32,
     /// Unit: px.
-    pub height: usize,
+    pub height: u32,
     /// Follor CSS color format.
     pub color: String,
 }
