@@ -1,6 +1,6 @@
 /// Void MP3 audio file.
 ///
-/// Other attributes: sampling = 8000Hz
+/// Other attributes: 8000 Hz, mono, s16p, 8 kb/s
 pub struct VoidMP3 {
     /// Unit: seconds.
     pub duration: f64,

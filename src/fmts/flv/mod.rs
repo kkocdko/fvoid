@@ -4,7 +4,7 @@
 pub struct VoidFLV {
     /// Unit: seconds.
     pub duration: f64,
-    /// Frames per second, affects jump accuracy. Suggested values: 1, 10, 30.
+    /// Frames per second, affects jump accuracy. Suggested values: 1, 5, 30.
     pub fps: f64,
 }
 

@@ -2,7 +2,7 @@
 //!
 //! # Example
 //!
-//! Generate a PDF file with 3 pages and default size (100 x 200):
+//! Generate a blank PDF file with 3 pages and default size (100 x 200):
 //!
 //! ```rust
 //! use fvoid::VoidPDF;
@@ -14,8 +14,11 @@
 //! // std::fs::write("void.pdf", pdf_data).unwrap();
 //! ```
 mod fmts;
+pub use fmts::bin::VoidBIN;
 pub use fmts::flv::VoidFLV;
+pub use fmts::m3u::VoidM3U;
 pub use fmts::mp3::VoidMP3;
+pub use fmts::mts::VoidMTS;
 pub use fmts::pdf::VoidPDF;
 pub use fmts::svg::VoidSVG;
-pub use fmts::txt::VoidTXT;
+pub use fmts::wav::VoidWAV;

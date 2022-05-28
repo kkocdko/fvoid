@@ -25,11 +25,14 @@ fn main() {
     let opts: Vec<(&str, &str)> = opts.split(',').filter_map(|i| i.split_once('=')).collect();
     let path = args[2].as_str();
     let data = match kind {
+        "bin" => accept_kind!(VoidBIN, [content, size], opts),
         "flv" => accept_kind!(VoidFLV, [duration, fps], opts),
+        "m3u" | "m3u8" => accept_kind!(VoidM3U, [duration, filename], opts),
         "mp3" => accept_kind!(VoidMP3, [duration], opts),
+        "mts" | "ts" => accept_kind!(VoidMTS, [duration, fps], opts),
         "pdf" => accept_kind!(VoidPDF, [width, height, page_count], opts),
         "svg" => accept_kind!(VoidSVG, [width, height, color], opts),
-        "txt" => accept_kind!(VoidTXT, [content, size], opts),
+        "wav" => accept_kind!(VoidWAV, [duration, sampling], opts),
         k => panic!("unknown format {k}"),
     };
     std::fs::write(path, data).unwrap();

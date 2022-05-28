@@ -3,10 +3,10 @@
 /// Other attributes: ver = 1.3
 pub struct VoidPDF {
     /// Unit: px, on 72PPI.
-    pub width: usize,
+    pub width: u32,
     /// Unit: px, on 72PPI.
-    pub height: usize,
-    pub page_count: usize,
+    pub height: u32,
+    pub page_count: u32,
 }
 
 impl Default for VoidPDF {

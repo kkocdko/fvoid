@@ -1,5 +1,5 @@
-/// Plain text file.
-pub struct VoidTXT {
+/// Void binary file.
+pub struct VoidBIN {
     /// Each byte will be filled to this.
     pub content: u8,
     /// Unit: bytes.
@@ -7,7 +7,7 @@ pub struct VoidTXT {
 }
 
 #[allow(clippy::derivable_impls)]
-impl Default for VoidTXT {
+impl Default for VoidBIN {
     fn default() -> Self {
         Self {
             content: 0,
@@ -16,7 +16,7 @@ impl Default for VoidTXT {
     }
 }
 
-impl VoidTXT {
+impl VoidBIN {
     pub fn data(&self) -> Vec<u8> {
         vec![self.content; self.size]
     }
