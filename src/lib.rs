@@ -13,12 +13,23 @@
 //! let pdf_data = pdf_cfg.data();
 //! // std::fs::write("void.pdf", pdf_data).unwrap();
 //! ```
-mod fmts;
-pub use fmts::bin::VoidBIN;
-pub use fmts::flv::VoidFLV;
-pub use fmts::m3u::VoidM3U;
-pub use fmts::mp3::VoidMP3;
-pub use fmts::mts::VoidMTS;
-pub use fmts::pdf::VoidPDF;
-pub use fmts::svg::VoidSVG;
-pub use fmts::wav::VoidWAV;
+pub use fmts::void_bin::VoidBIN;
+pub use fmts::void_flv::VoidFLV;
+pub use fmts::void_m3u::VoidM3U;
+pub use fmts::void_mp3::VoidMP3;
+pub use fmts::void_mts::VoidMTS;
+pub use fmts::void_pdf::VoidPDF;
+pub use fmts::void_svg::VoidSVG;
+pub use fmts::void_wav::VoidWAV;
+#[path = "fmts"]
+mod fmts {
+    pub mod void_bin;
+    pub mod void_flv;
+    pub mod void_m3u;
+    pub mod void_mp3;
+    pub mod void_mts;
+    pub mod void_pdf;
+    pub mod void_svg;
+    pub mod void_wav;
+}
+// starts with `void_` because some of ext like `7z` is not a legal identifier
