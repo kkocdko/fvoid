@@ -10,7 +10,7 @@ impl Default for VoidM3U {
     fn default() -> Self {
         Self {
             duration: 5.0,
-            filename: "".into(),
+            filename: "foo.ts".into(),
         }
     }
 }

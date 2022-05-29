@@ -48,9 +48,7 @@ ffmpeg -f lavfi -i anullsrc=r=8000:cl=mono -t 10 -b:a 8k sample.mp3
 
 https://hexed.it
 
-let s='',d=`
+{let s='',d=`
 0xFF, 0xE3, 0x18, 0xC4, 0xC4, 0x00, 0x00, 0x03, 0x48, 0x00, 0x00, 0x00
-`.split(',').map(v=>v.trim());
-for(let i=0;i<d.length;i++)s+=d[i]+','+(i%16==15?'\n':' ');
-console.log(s);
+`.split(',').map(v=>v.trim());for(let i=0;i<d.length;i++)s+=d[i]+','+(i%16==15?'\n':' ');console.log(s);}
 */

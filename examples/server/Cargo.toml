@@ -1,0 +1,16 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[profile.release]
+strip = true
+lto = "fat"
+panic = "abort"
+codegen-units = 1
+opt-level = "z"
+
+[dependencies]
+fvoid = { path = "../.." }
+tiny_http = "0.11.0"
