@@ -32,6 +32,7 @@ fn main() {
     let path = args[2].as_str();
     let data = match kind {
         "bin" => accept!(VoidBIN, [content, size], opts),
+        "bmp" => accept!(VoidBMP, [width, height], opts),
         "flv" => accept!(VoidFLV, [duration, fps], opts),
         "m3u" => accept!(VoidM3U, [duration, filename], opts),
         "mp3" => accept!(VoidMP3, [duration], opts),

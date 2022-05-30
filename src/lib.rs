@@ -14,6 +14,7 @@
 //! // std::fs::write("void.pdf", pdf_data).unwrap();
 //! ```
 pub use fmts::void_bin::VoidBIN;
+pub use fmts::void_bmp::VoidBMP;
 pub use fmts::void_flv::VoidFLV;
 pub use fmts::void_m3u::VoidM3U;
 pub use fmts::void_mp3::VoidMP3;
@@ -25,6 +26,7 @@ pub use fmts::void_wav::VoidWAV;
 #[path = "fmts"]
 mod fmts {
     pub mod void_bin;
+    pub mod void_bmp;
     pub mod void_flv;
     pub mod void_m3u;
     pub mod void_mp3;
