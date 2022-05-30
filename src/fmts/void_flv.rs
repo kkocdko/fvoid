@@ -51,7 +51,7 @@ impl VoidFLV {
     }
 }
 
-const T_0: &[u8] = include_bytes!("void_flv_t0.bin") /* duration (double, 8 bytes) */ ;
+const T_0: &[u8] = include_bytes!("void_flv.t0.bin") /* duration (double, 8 bytes) */ ;
 const T_1: &[u8] = &[
     0x00, 0x09, 0x66, 0x72, 0x61, 0x6D, 0x65, 0x72, 0x61, 0x74, 0x65,
     0x00, /* framerate (double, 8 bytes) */

@@ -35,7 +35,8 @@ fn main() {
         "flv" => accept!(VoidFLV, [duration, fps], opts),
         "m3u" => accept!(VoidM3U, [duration, filename], opts),
         "mp3" => accept!(VoidMP3, [duration], opts),
-        "mts" => accept!(VoidMTS, [duration, fps], opts),
+        // "mp4" => accept!(VoidMP4, [duration, fps], opts),
+        // "mts" => accept!(VoidMTS, [duration, fps], opts),
         "pdf" => accept!(VoidPDF, [width, height, page_count], opts),
         "svg" => accept!(VoidSVG, [width, height, color], opts),
         "wav" => accept!(VoidWAV, [duration, sampling], opts),
@@ -53,4 +54,4 @@ examples:
     fvoid mp3 void.mp3
 ";
 
-// .vscode/run.sh mts:duration=20 target/void.
+// .vscode/run.sh mp4:duration=20 target/void.mp4
