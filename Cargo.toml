@@ -1,9 +1,10 @@
 [package]
 name = "fvoid"
-version = "0.2.3"
+version = "0.2.4"
 edition = "2021"
 description = "Void file generator, supports many formats."
 license = "Unlicense"
+exclude = ["/examples"]
 
 [profile.release]
 strip = true
