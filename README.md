@@ -11,5 +11,3 @@ Void file generator, supports many formats.
 - `VoidPNG`: To be implemented.
 
 - `VoidJPEG`: To be implemented.
-
-- Example server using [tiny-http](https://github.com/tiny-http/tiny-http).

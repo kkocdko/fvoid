@@ -18,11 +18,6 @@ fn main() {
         fps: 2.0,
     }
     .data();
-    let void_m3u = VoidM3U {
-        duration: 3600.0,
-        filename: "void.wav".to_string(),
-    }
-    .data();
     let void_pdf = VoidPDF {
         width: 10,
         height: 10,
@@ -34,6 +29,9 @@ fn main() {
         ..Default::default()
     }
     .data();
+    let void_m3u = include_bytes!("../target/_temp/void.m3u8").to_vec();
+    let void_mp4 = include_bytes!("../target/_temp/void.mp4").to_vec();
+    let void_mts = include_bytes!("../target/_temp/void0.ts").to_vec();
     println!("address = 0.0.0.0:9902");
     for req in Server::http("0.0.0.0:9902").unwrap().incoming_requests() {
         match req.url() {
@@ -41,7 +39,10 @@ fn main() {
             "/void.pdf" => respond(req, &void_pdf, "application/pdf"),
             "/void.flv" => respond(req, &void_flv, "video/x-flv"),
             "/void.wav" => respond(req, &void_wav, "audio/wav"),
+            // by build.rs
             "/void.m3u" | "/void.m3u8" => respond(req, &void_m3u, "application/mpegurl"),
+            "/void.ts" | "/void0.ts" | "/void.mts" => respond(req, &void_mts, "video/MP2T"),
+            "/void.mp4" => respond(req, &void_mp4, "video/mp4"),
             _ => {
                 req.respond(Response::empty(404)).unwrap();
             }

@@ -11,8 +11,8 @@ pub struct VoidBMP {
 impl Default for VoidBMP {
     fn default() -> Self {
         Self {
-            width: 100,
-            height: 200,
+            width: 160,
+            height: 90,
         }
     }
 }
