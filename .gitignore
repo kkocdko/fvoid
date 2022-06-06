@@ -1,2 +1,4 @@
 /.vscode
-target
+/target
+/examples/fvoid-miniserve/dist
+/examples/fvoid-server/target
