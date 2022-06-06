@@ -2,8 +2,9 @@ use fvoid::*;
 use tiny_http::{Header, Request, Response, Server};
 
 fn respond(req: Request, data: &Vec<u8>, mime: &str) {
-    let header = Header::from_bytes("content-type", mime).unwrap();
-    let response = Response::from_data(data.clone()).with_header(header);
+    let response = Response::from_data(data.clone())
+        .with_header(Header::from_bytes("content-type", mime).unwrap())
+        .with_header(Header::from_bytes("access-control-allow-origin", "*").unwrap());
     req.respond(response).unwrap();
 }
 
