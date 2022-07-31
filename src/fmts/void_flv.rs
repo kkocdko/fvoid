@@ -71,5 +71,5 @@ const T_5: &[u8] = &[
 
 /*
 ffmpeg -y -f lavfi -i nullsrc=size=4x4:rate=1:duration=50,lutrgb=0:0:0 flv50.flv
-thanks to jianshu.com/p/7ffaec7b3be6
+thanks to https://jianshu.com/p/7ffaec7b3be6
 */
